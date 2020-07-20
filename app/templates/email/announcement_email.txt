@@ -1,0 +1,9 @@
+Dear {{ firstname }},
+
+Your admin with username {{ user.username }} on our site,
+
+has the following announcement: {{ message }}
+
+Sincerely,
+
+The Lunch Roulette Team

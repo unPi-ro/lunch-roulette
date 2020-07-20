@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Dear admin {{ current_user.username }},</h1>
+    <h4>Welcome to (y)our web service!</h4>
+    <br>
+    <h5>You may send announcements to users:</h5>
+    {% if form %}
+    <div class="row">
+        <div class="col-md-4">
+          {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <br>
+    {% endif %}
+{% endblock %}

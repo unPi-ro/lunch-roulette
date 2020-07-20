@@ -1,0 +1,15 @@
+<p>Dear {{ firstname }},</p>
+<p>
+   <p>Your colleague with username {{ user.username }} on our site,</p>
+   <p>wants to invite you to their Lunch Roulette community for your Company,</p>
+   <p>with message: {{ message }}</p>
+   If you wish to accept their invitation and join, please 
+    <a href="{{ url_for('register', parent=user.username, _external=True) }}">
+        click here
+    </a>.
+</p>
+<p>Alternatively, you can paste the following link in your browser's address bar:</p>
+<p>{{ url_for('register', parent=user.username, _external=True) }}</p>
+<p>If you do not want to reqister to Lunch Roulette for your Company, ignore this message.</p>
+<p>Sincerely,</p>
+<p>The Lunch Roulette Team</p>

@@ -1,0 +1,11 @@
+Dear {{ user.username }},
+
+To confirm your email click on the following link:
+
+{{ url_for('confirm_email', token=token, _external=True) }}
+
+If you have not registered to Lunch Roulette, please ignore this message.
+
+Sincerely,
+
+The Lunch Roulette Team

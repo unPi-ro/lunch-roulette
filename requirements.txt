@@ -1,0 +1,14 @@
+Flask
+flask-sqlalchemy
+flask-migrate
+flask-wtf
+wtforms-components
+flask-login
+flask-bootstrap
+flask-moment
+sendgrid==5.6.0
+pyjwt
+gunicorn
+psycopg2-binary
+redis
+rq

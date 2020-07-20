@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <table class="table table-hover">
+        <tr>
+            <td width="256px"><img src="{{ user.avatar(256) }}"></td>
+            <td>
+                <h1>User: {{ user.username }}</h1>
+                {% if user.about_me %}<p>About me: {{ user.about_me }}</p>{% endif %}
+                {% if user.topics %}<p>Topics: {{ user.topics }}</p>{% endif %}
+                {% if user.lunch_time and user.invite_me %}<p>Goes for lunch at: {{ user.lunch_time }}</p>{% endif %}
+                {% if user.site %}<p>Site: {{ user.site }}</p>{% endif %}
+                {% if user.canteen %}<p>Canteen: {{ user.canteen }}</p>{% endif %}
+                {% if user.last_seen %}
+                <p>Last seen on: {{ moment(user.last_seen).format('LLL') }}</p>
+                {% endif %}
+                <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+                {% if user == current_user %}
+                <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+                {% elif not current_user.is_following(user) %}
+                <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
+                {% else %}
+                <p><a href="{{ url_for('unfollow', username=user.username) }}">Unfollow</a></p>
+                {% endif %}
+                {% if user != current_user %}
+                <p>
+                    <a href="{{ url_for('send_message', recipient=user.username) }}">
+                        Send private message
+                    </a>
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

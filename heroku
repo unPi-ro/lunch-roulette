@@ -1,0 +1,13 @@
+# quick notepad of heroku commands
+
+heroku config:set LOG_TO_STDOUT=1
+heroku config:set FLASK_APP=roulette.py
+
+heroku config:set SENDGRID_API_KEY='your-generated-inside-the-sendgrid-add-on'
+heroku config:set SENDGRID_DEFAULT_FROM='your.admin@org'
+
+heroku config:set RECAPTCHA_PUBLIC_KEY=your.pub.key
+heroku config:set RECAPTCHA_PRIVATE_KEY=your.priv.key
+
+heroku config:set WEB_CONCURRENCY=5
+heroku ps:scale worker=1

@@ -1,0 +1,30 @@
+<table class="table">
+    <tr>
+        <td width="64" style="border: 0px;"><img src="{{ user.avatar(64) }}"></td>
+        <td style="border: 0px;">
+            <p>
+                <a href="{{ url_for('user', username=user.username) }}">
+                    {{ user.username }}
+                </a>
+            </p>
+            <small>
+                {% if user.about_me %}<p>About me: {{ user.about_me }}</p>{% endif %}
+                {% if user.topics %}<p>Topics: {{ user.topics }}</p>{% endif %}
+                {% if user.lunch_time and user.invite_me %}<p>Goes for lunch at: {{ user.lunch_time }}</p>{% endif %}
+                {% if user.site %}<p>Site: {{ user.site }}</p>{% endif %}
+                {% if user.last_seen %}
+                <p>Last seen on: {{ moment(user.last_seen).format('ll') }}</p>
+                {% endif %}
+                <p>{{ user.followers.count() }} followers,
+                   {{ user.followed.count() }} following</p>
+                {% if user != current_user %}
+                    {% if not current_user.is_following(user) %}
+                    <a href="{{ url_for('follow', username=user.username) }}">Follow</a>
+                    {% else %}
+                    <a href="{{ url_for('unfollow', username=user.username) }}">Unfollow</a>
+                    {% endif %}
+                {% endif %}
+            </small>
+        </td>
+    </tr>
+</table>

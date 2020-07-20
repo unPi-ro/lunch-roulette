@@ -1,0 +1,30 @@
+    <table class="table table-hover">
+        <tr>
+            <td width="70px">
+                <a href="{{ url_for('user', username=post.username) }}">
+                    <img src="{{ post.avatar(70) }}" />
+                </a>
+            </td>
+            <td>
+                {% set user_link %}
+                    <span class="user_popup">
+                        <a href="{{ url_for('user', username=post.username) }}">
+                          {{ post.username }}
+                        </a>
+                    </span>
+                {% endset %}
+                {{ user_link }}
+                {% if not current_user.is_admin and not current_user.is_super %}
+                <br> About me: {{ post.about_me }}
+                {% endif %}
+                <br> I'm interested in topics like: {{ post.topics }}
+                {% if current_user.is_admin or current_user.is_super %}
+                <br> E-mail: {{ post.email }}
+                <br> Confirmed: {{ post.confirmed }}
+                {% if current_user.is_super %}
+                || Admin: {{ post.is_admin }} || Super: {{ post.is_super }}
+                {% endif %}
+                {% endif %}
+            </td>
+        </tr>
+    </table>

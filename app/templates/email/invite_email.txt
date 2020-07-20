@@ -1,0 +1,17 @@
+Dear {{ firstname }},
+
+Your colleague with username {{ user.username }} on our site,
+
+wants to invite you to their Lunch Roulette community for your Company,
+
+with message: {{ message }}
+
+If you wish to accept their invitation and join, please click this link:
+
+{{ url_for('register', parent=user.username, _external=True) }}
+
+If you do not want to reqister to Lunch Roulette for your Company, ignore this message.
+
+Sincerely,
+
+The Lunch Roulette Team
