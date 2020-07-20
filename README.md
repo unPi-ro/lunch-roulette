@@ -6,6 +6,8 @@ Ciprian bought and we took heavy inspiration from the [Flask Mega Tutorial](http
 
 We have enjoyed running [our Lunch Roulette](https://www.lunch-roulette.org/) on [Heroku](https://www.heroku.com/) which was, and still is, a great fit for this implementation.
 
+P.S. at this moment we have no further plans to update this codebase.
+
 #### Installing your developer environment
 
 - run ./runme.sh to get the NTLM proxy, PostgreSQL and required deps up and running
