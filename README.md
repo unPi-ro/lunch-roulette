@@ -4,7 +4,7 @@
 
 Ciprian bought and we took heavy inspiration from the [Flask Mega Tutorial](https://courses.miguelgrinberg.com/p/flask-mega-tutorial) which we wholeheartedly recommend you to read in order to quickly grasp how we built our (now open sourced under a [BSD-3 license](LICENSE)) implementation of the decade old [Lunch Roulette](https://hbr.org/2013/01/a-new-way-to-network-inside-yo) idea.
 
-We have enjoyed running [our Lunch Roulette](httpsL//www.lunch-roulette.org) on [Heroku](https://www.heroku.com/) which was, and still is, a great fit for this implementation.
+We have enjoyed running [our Lunch Roulette](https://www.lunch-roulette.org/) on [Heroku](https://www.heroku.com/) which was, and still is, a great fit for this implementation.
 
 #### Installing your developer environment
 
