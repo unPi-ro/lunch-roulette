@@ -10,7 +10,7 @@ P.S. at this moment we have no further plans to update this codebase.
 
 ### Features
 
-- [x] built with [Flask](https://palletsprojects.com/p/flask/), safe logins, easy DB migrations
+- [x] built with [Flask](https://palletsprojects.com/p/flask/): safe logins, easy DB migrations
 - [x] security, auto-scaling, data safety based on [Heroku](https://www.heroku.com/)
 - [x] simple (and GDPR consciuos) user sign-up page
 - [x] (GDPR bonus) purge of inactive accounts (90 days)
