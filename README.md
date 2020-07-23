@@ -8,6 +8,29 @@ Ciprian bought and we took heavy inspiration from the [Flask Mega Tutorial](http
 
 P.S. at this moment we have no further plans to update this codebase.
 
+### Features
+
+- [x] built with [Flask](https://palletsprojects.com/p/flask/), safe logins, easy DB migrations
+- [x] security, auto-scaling, data safety based on [Heroku](https://www.heroku.com/)
+- [x] simple (and GDPR consciuos) user sign-up page
+- [x] (GDPR bonus) purge of inactive accounts (90 days)
+- [x] password reset support (with expiring web link)
+- [x] support for Gravatar(s) (no pictures stored)
+- [x] simple and super simple user profile page
+- [x] very simplistic internal messaging system
+- [x] users' session auto-timeout support
+- [x] all user content visible only after users' authentication
+- [x] company detection based on their own TLDs (@domain)
+- [x] multi-user and multi-company support in same instance
+- [x] company admin(s) and super admin(s) (more visibility)
+- [x] invites and random lunches only inside same company
+- [x] browser/user time zone detection (when is lunch time?)
+- [x] SendGrid support for sending (all) emails
+- [x] reCaptcha support (disabled by default)
+- [x] Google Analytics support
+- [x] Satismeter support
+- [x] Freshchat support
+
 #### Installing your developer environment
 
 - run ./runme.sh to get the NTLM proxy, PostgreSQL and required deps up and running
