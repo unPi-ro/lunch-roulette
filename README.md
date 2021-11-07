@@ -36,4 +36,4 @@ P.S. at this moment we have no further plans to update this codebase.
 - run ./runme.sh to get the NTLM proxy, PostgreSQL and required deps up and running
 - then later, run ./local/install.sh to get a local python virtualenv for faster iteration
 
-#### NOTE: use _git grep your_ to find the ids & keys you should change before deploying it
+#### NOTE: use `git grep your` to find the ids & keys you should change before deploying it
